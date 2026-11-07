@@ -4,29 +4,16 @@
 
 A Claude Code skill plus seven context templates for starting a project the spec-first way: talk the idea through, write down what to build, approve it, and only then let Claude write code.
 
-## Mula cepat (BM)
+## Quick start
 
-Selalu kita suruh Claude "buatkan aku app". Claude teka semua benda yang kita tak cakap, lepas tu app pecah. Kit ni terbalikkan cara tu: discuss dulu, tulis spec, approve, baru Claude tulis code.
+Ask Claude to "build me an app" and it guesses everything you didn't say, then the app breaks. This kit turns that around: discuss first, write the spec, approve it, and only then does Claude write code.
 
-**Pasang** (sekali je, takde installer, takde script):
+1. **Install** once: [copy the skill folder](#install) into `~/.claude/skills/`. The seven templates come with it.
+2. **`discuss [idea]`** in your project folder, for example `discuss a pre-order page for my mum's kuih raya`. Claude asks one question at a time, offers 2–3 approaches with one recommended, and shows the design section by section for you to approve. If the idea doesn't hold up, you stop there, and no code is wasted.
+3. **`context kit`**: Claude fills the seven files in `context/` and the first feature spec (`F-01`) from your answers, checks its own work (no placeholders, no contradictions), and waits for your approval.
+4. **Approve the specs**, and Claude writes code: one feature at a time, against the acceptance criteria (`AC-1`, `AC-2`…) in its spec. The ACs are the contract.
 
-```bash
-git clone https://github.com/nrfitriazim/claude-context-kit.git
-```
-
-```bash
-mkdir -p ~/.claude/skills && cp -r claude-context-kit/skills/context-kit ~/.claude/skills/
-```
-
-Template 7 fail tu ikut sekali dalam folder skill.
-
-**Guna** dalam Claude Code, kat folder projek:
-
-1. **`discuss [idea]`**, contoh `discuss web pre-order kuih raya untuk mak aku`. Claude tanya satu soalan, satu masa. Lepas tu dia bagi 2–3 cara, satu cadangan, dan tunjuk design ikut bahagian untuk kau approve. Kalau idea tu tak jadi, berhenti je. Takde code yang terbuang.
-2. **`context kit`**. Claude isi 7 fail dalam `context/` dan spec feature pertama (`F-01`) daripada jawapan discussion tadi, semak sendiri (takde placeholder, takde yang bercanggah), lepas tu tunggu kau approve.
-3. **Approve spec**, baru Claude tulis code: satu feature satu masa, ikut acceptance criteria (`AC-1`, `AC-2`…) dalam spec. AC = kontrak.
-
-Ada duit? Feature tu terus **GA**, tahap check paling ketat.
+Anything that takes money is **GA**, the strictest level of checks.
 
 ## What it is
 
