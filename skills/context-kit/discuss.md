@@ -61,6 +61,8 @@ Show one section per message and wait for approval before the next. Fold changes
 
 For section 2, show the Workflow Depth table and its two rules from the template `context/project-overview.md` beside this skill, and place the project on it.
 
+For section 4, when a design skill is installed (Anthropic's `frontend-design`, for example), load it before proposing the look, and show the palette (named hex values) and typefaces it leads to, so `context kit` writes those exact values.
+
 Done when every section is approved. Then send a short recap: each approved section in a few lines, the open questions, anything still assumed, and the language the files will be written in (the discussion's, unless the user asks for another). End by telling the user the next step is `context kit`.
 
 ## The idea is allowed to die
