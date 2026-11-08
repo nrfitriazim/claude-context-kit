@@ -82,7 +82,7 @@ To update, pull this repo and copy the folder again.
 
 Run it in the project folder. If the folder already has code or docs, Claude reads them first and skips the questions they answer.
 
-1. **Questions, one at a time.** Numbered (`1 / 6`), usually 4–8 of them, mostly pick-one with a recommended option. They cover who it is for, the core flow, what is in and out of v1, whether it takes money, what success looks like, your constraints, and the look if it has a UI.
+1. **Questions, one at a time.** Numbered (`1 / 6`), usually 4–8 of them, mostly pick-one with a recommended option. They cover who it is for, the core flow, what is in and out of v1, whether it takes money, what success looks like, your constraints, and the look if it has a UI, including whether to design in Figma first or go straight to code.
 2. **Two or three approaches**, with trade-offs and one marked Recommended. You pick.
 3. **The design, section by section:** Product, Depth, Architecture, Look, First features. You approve each one before the next.
 
@@ -143,6 +143,13 @@ Tools, commands and what each level tests live in `code-standards.md` → Testin
 ## Design system page
 
 `design.md` holds the direction and `ui-context.md` holds the tokens. Both are rendered on one design system page, approved before pages are built: inside the app when there is one (real components, so it cannot drift), or a standalone `context/design-system.html` when there is no app to host it.
+
+### Figma first, or code first
+
+The discussion asks how you want to work:
+
+- **Code first** (the default for solo builds and prototypes): the look is approved on the design system page.
+- **Figma first** (when a client expects mockups, or you already design in Figma): each feature's screens are approved in Figma before its code is written, the tokens come from your Figma variables, and each spec links its frames. Claude then asks who makes the screens: you or your designer (Claude reads them), or Claude drafting them in Figma for you to approve. For Claude to read or draft in Figma, connect a Figma MCP server to Claude Code; without one, you make the screens and share links or screenshots.
 
 ## Skill check
 

@@ -3,6 +3,9 @@
 Status: Draft → Approved → Built → Verified
 Depth: [Inherits project level from project-overview.md,
 or raised here — e.g. GA because it takes money]
+Design: [Figma-first projects only: link to this
+feature's frames, and whether they are approved. Delete
+this line in code-first projects.]
 
 ## What & Why
 

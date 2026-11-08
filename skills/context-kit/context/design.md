@@ -55,6 +55,15 @@ neutral background, 4:5, owner approved AI photos on
 - ❌ [e.g. Text on gradients — contrast beats the spec]
 - ❌ [e.g. Rounded pill buttons]
 
+## Design Source
+
+[Where the look is decided and approved. Code first: the
+design system page (`ui-context.md`) is the source of
+truth. Figma first: the Figma file link, who makes the
+screens (the owner, a designer, or Claude through a
+Figma MCP server), and the rule that a feature's frames
+are approved before its code is built.]
+
 ## Approval Log
 
 - [Date] — [What was approved, by whom, and where the

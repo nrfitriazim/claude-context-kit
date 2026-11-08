@@ -25,8 +25,21 @@ Before each question, look at the coverage table and ask about the most importan
 | Success         | How the user will know v1 worked                                              | Success Criteria                             |
 | Constraints     | Deadline, budget, hosting, a stack already chosen, the builder's experience  | Stack, the approaches                        |
 | Look (UI only)  | 1–3 references with what to take and not take from each, mood words, brand assets that exist | `design.md`, `ui-context.md`  |
+| Design source (UI only) | Figma first or code first, and for Figma first, who makes the screens (below) | `design.md` → Design Source |
 
 Done when every row is answered or has a default ready to propose. That is usually 4–8 questions; stop asking as soon as you could write the design.
+
+### Figma first, or code first
+
+Every UI project gets this as a question, because only the user knows how they work:
+
+- **Code first**: the look is approved on the design system page inside the app (`ui-context.md` → Design System Page). Recommend it for solo builds and prototypes.
+- **Figma first**: each feature's screens are designed and approved in Figma before its code is written. Recommend it when a client expects mockups, or the user already designs in Figma.
+
+When the answer is Figma first, ask the follow-up question of who makes the screens:
+
+- **The user or their designer**: Claude reads the frames and variables through a Figma MCP server when one is connected, or from the links and screenshots the user shares.
+- **Claude drafts them in Figma** through a Figma MCP server, and the user approves or edits them there. Check that a Figma MCP server is connected before offering this; when none is, say so and offer the other two routes.
 
 ## 3. Two or three approaches
 
@@ -43,7 +56,7 @@ Show one section per message and wait for approval before the next. Fold changes
 | 1 | Product        | Overview, goals, core flow, features, in and out of scope, success criteria                 | `project-overview.md`                  |
 | 2 | Depth          | The workflow depth level and why; every feature raised to GA because it takes money          | `project-overview.md` → Workflow Depth |
 | 3 | Architecture   | Stack, system boundaries (folders), storage, auth and access, invariants, testing tools      | `architecture.md`, `code-standards.md` |
-| 4 | Look (UI only) | References with take and don't take, mood, brand assets, theme direction                     | `design.md`, `ui-context.md`           |
+| 4 | Look (UI only) | References with take and don't take, mood, brand assets, theme direction, design source (Figma first or code first, and who makes the screens) | `design.md`, `ui-context.md` |
 | 5 | First features | The first 1–3 features as `F-01`…, each with 2–4 acceptance criteria (`AC-1`…), each one observable and checkable on its own | `feature-specs/` |
 
 For section 2, show the Workflow Depth table and its two rules from the template `context/project-overview.md` beside this skill, and place the project on it.

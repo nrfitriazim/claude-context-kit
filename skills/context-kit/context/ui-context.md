@@ -16,7 +16,8 @@ and vivid accent colors for interactive elements.]
 
 [Define your color tokens as CSS custom properties.
 All components must use these tokens — no hardcoded
-hex values.]
+hex values. Figma-first projects take these values
+from the Figma variables.]
 
 | Role            | CSS Variable       | Value    |
 | --------------- | ------------------ | -------- |

@@ -35,6 +35,10 @@ from `feature-specs/_template.md`. Its acceptance
 criteria (AC-1, AC-2…) are the contract: every build
 task serves an AC, and every check points back to one.
 
+In Figma-first projects (`design.md` → Design Source),
+a feature's code waits until its frames are approved
+as well as its spec, and the build matches those frames.
+
 ## Before Building: Input Coverage Check
 
 List every value the feature shows, computes, or
