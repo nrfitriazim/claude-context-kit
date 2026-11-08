@@ -155,6 +155,19 @@ The discussion asks how you want to work:
 
 When the stack is decided, and again whenever a new tool joins the project, Claude looks for the vendor's official agent skill for each tool (community skills only when there is no official one), reads it before proposing it, and shows you a table: skill, vendor, whether it runs code, size, recommendation. Nothing installs without your approval. An install is a copy of the reviewed files into the repo's `.claude/skills/`, pinned by commit SHA in `architecture.md` → Skills. The full steps are in `ai-workflow-rules.md`.
 
+## With Superpowers
+
+[Superpowers](https://github.com/obra/superpowers) also starts with a brainstorm, so the first half overlaps: questions one at a time, approaches, a design you approve, no code before that. The difference is what stays behind. Superpowers writes a design doc and a plan for each piece of work, then drives the build with test-driven development, subagents and code review. This kit writes the project's standing context (the seven files, IDed acceptance criteria, where each value comes from, assumptions, workflow depth) and stops at approved specs. How the code gets written is left to you, or to Superpowers.
+
+They work together. Tested with both installed in one project (Superpowers 7.0.0, Claude Code 2.1.319, Claude Opus 5.5):
+
+- `discuss [idea]`, and a plain "let's plan it properly before any code", ran this kit's discussion in 3 of 3 runs.
+- After the design was approved, Claude pointed to `context kit` rather than a Superpowers plan, and `context kit` wrote the files as usual.
+- Asked to build an approved spec, Claude followed the spec and the project's workflow rules. Superpowers' test-driven-development skill joined in for 2 of 3 runs. No run brainstormed an approved spec again.
+- With the specs still in Draft, a new session refused to build.
+
+So: plan with this kit, build with Superpowers. When its test-driven-development skill joins in, it writes tests first whatever the project's depth, so a Prototype may get more tests than its depth asks for.
+
 ## Without Claude Code
 
 The templates are plain Markdown. Copy `skills/context-kit/context/` into any repo and fill it by hand or with any AI tool; `discuss.md` and `fill.md` describe the method step by step.
