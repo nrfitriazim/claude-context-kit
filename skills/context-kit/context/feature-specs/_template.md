@@ -2,7 +2,7 @@
 
 Status: Draft → Approved → Built → Verified
 Depth: [Inherits project level from project-overview.md,
-or raised here — e.g. GA because it takes money]
+or raised here — e.g. GA (money): it takes payments]
 Design: [Figma-first projects only: link to this
 feature's frames, and whether they are approved. Delete
 this line in code-first projects.]
@@ -58,6 +58,7 @@ date and where it was checked. Depth decides how — see
 ai-workflow-rules.md.]
 
 - AC-1 [✅ / ❌] [date] — [where + how, e.g. live,
-  browser check / smoke test / real paid order] —
+  browser check / smoke test / access test / real
+  payment] —
   [test that covers it, e.g. `e2e/cart.spec.ts`, or
   "manual"]

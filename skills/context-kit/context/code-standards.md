@@ -63,12 +63,16 @@ this project only.
 **What gets tested** (by the project's Workflow Depth in
 `project-overview.md`; each level adds to the one above):
 
-| Level     | Tests                                          |
-| --------- | ---------------------------------------------- |
-| Prototype | None                                           |
-| Alpha     | No test files — ACs checked in a browser       |
-| Beta      | Playwright smoke test per critical AC (pages load, login, admin create → edit → delete), run after every deploy |
-| GA        | + Vitest on the money logic (pricing, totals, shipping, discounts — server side) + a forged-webhook test (a fake "paid" must be rejected) + a sandbox payment run end to end + one real paid order before launch |
+| Level             | Tests                                          |
+| ----------------- | ---------------------------------------------- |
+| Prototype         | None                                           |
+| Alpha             | No test files — ACs checked by hand where it runs |
+| Beta              | Automated smoke test per critical AC (it starts, sign-in works, create → edit → delete), run after every deploy |
+| GA, money         | + unit tests on the money logic (prices, totals, shipping, discounts — server side) + a forged-notification test (a fake "paid" must be rejected) + a sandbox payment run end to end + one real payment before launch |
+| GA, personal data | + an access test for every role (a user cannot read or change another user's records; signed-out requests are refused) + a delete-on-request test + one restore from backup before launch |
+
+A GA project runs the GA row for each GA risk it has
+(`project-overview.md` → Workflow Depth).
 
 Rules:
 

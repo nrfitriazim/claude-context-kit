@@ -13,7 +13,7 @@ Ask Claude to "build me an app" and it guesses everything you didn't say, then t
 3. **`context kit`**: Claude fills the seven files in `context/` and the first feature spec (`F-01`) from your answers, checks its own work (no placeholders, no contradictions), and waits for your approval.
 4. **Approve the specs**, and Claude writes code: one feature at a time, against the acceptance criteria (`AC-1`, `AC-2`…) in its spec. The ACs are the contract.
 
-Anything that takes money is **GA**, the strictest level of checks.
+Anything that takes money or keeps sensitive personal data is **GA**, the strictest level of checks.
 
 ## What it is
 
@@ -82,7 +82,7 @@ To update, pull this repo and copy the folder again.
 
 Run it in the project folder. If the folder already has code or docs, Claude reads them first and skips the questions they answer.
 
-1. **Questions, one at a time.** Numbered (`1 / 6`), usually 4–8 of them, mostly pick-one with a recommended option. They cover who it is for, the core flow, what is in and out of v1, whether it takes money, what success looks like, your constraints, and the look if it has a UI, including whether to design in Figma first or go straight to code.
+1. **Questions, one at a time.** Numbered (`1 / 6`), usually 4–8 of them, mostly pick-one with a recommended option. They cover who it is for, the core flow, what is in and out of v1, whether it takes money or keeps sensitive personal data, what success looks like, your constraints, and the look if it has a UI, including whether to design in Figma first or go straight to code.
 2. **Two or three approaches**, with trade-offs and one marked Recommended. You pick.
 3. **The design, section by section:** Product, Depth, Architecture, Look, First features. You approve each one before the next.
 
@@ -126,14 +126,21 @@ In a project whose `context/` is already filled, run `discuss [feature]` for the
 
 How hard each feature gets checked. The level is set during the discussion and lives in `project-overview.md`.
 
-| Level         | Used for                              | Checks (each adds to the one above)                                                   |
-| ------------- | ------------------------------------- | ------------------------------------------------------------------------------------- |
-| **Prototype** | Prototypes, practice builds           | Build, then screenshot and look at it                                                 |
-| **Alpha**     | Brochure / content sites              | + every AC checked on staging/live, dated                                             |
-| **Beta**      | Someone edits content via admin / CMS | + automated smoke test on the live site (throwaway accounts the script creates and deletes) |
-| **GA**        | Anything that takes money             | + payment-path audit + code review + security review before launch + one real paid order checked end to end |
+| Level         | Used for                                                     | Checks (each adds to the one above)                                                   |
+| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| **Prototype** | Practice builds, demos, throwaway experiments                | Build, run it, and look at it                                                         |
+| **Alpha**     | Real users, but the content only changes when the code does  | + every AC checked where it runs (staging or live), dated                             |
+| **Beta**      | Others change content or data after launch (an admin, a CMS, user accounts) | + automated smoke test against the running app (throwaway accounts and data the script creates and deletes) |
+| **GA**        | A mistake costs someone money or exposes their sensitive personal data | + code review + security review before launch + the checks for each risk below |
 
-- **The money path is always GA**, even inside a lower-level project.
+GA has two risks, each with its own checks:
+
+- **Money** (payments, subscriptions, deposits, payouts): money logic runs on the server, a forged "paid" notification is rejected, and one real payment is checked end to end before launch.
+- **Sensitive personal data** (ID numbers, health, finances, exact location, children's data, grades, HR files): each person reaches only their own records (tested for every role), only what a feature uses is collected, a privacy notice says what is kept and why, a person can get, correct and delete their records, and a backup restore is tried before launch. The discussion names the data protection law that applies (GDPR, PDPA…). A name, an email and a sign-in on their own are not a GA risk.
+
+These are engineering checks, not legal advice.
+
+- **Money and sensitive personal data are always GA**, even inside a lower-level project.
 - **Levels only go up mid-project, never down silently.** A prototype that becomes the real build moves up, and its checks catch up before launch.
 
 ### Testing

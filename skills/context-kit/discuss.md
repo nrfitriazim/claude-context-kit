@@ -21,7 +21,7 @@ Before each question, look at the coverage table and ask about the most importan
 | Who and problem | Who uses it, and what pain it removes                                          | `project-overview.md` → Overview, Goals      |
 | Core flow       | The one thing a user must be able to do, end to end                           | Core User Flow, the first spec               |
 | v1 scope        | What is in, and what is explicitly out                                        | Scope                                        |
-| Money, editors  | Does it take money? Who edits content after launch?                           | Workflow Depth                               |
+| Risk, editors   | Does it take money or keep sensitive personal data? Who changes content or data after launch? | Workflow Depth                 |
 | Success         | How the user will know v1 worked                                              | Success Criteria                             |
 | Constraints     | Deadline, budget, hosting, a stack already chosen, the builder's experience  | Stack, the approaches                        |
 | Look (UI only)  | 1–3 references with what to take and not take from each, mood words, brand assets that exist | `design.md`, `ui-context.md`  |
@@ -54,12 +54,12 @@ Show one section per message and wait for approval before the next. Fold changes
 | # | Section        | Holds                                                                                       | Becomes                                |
 | - | -------------- | ------------------------------------------------------------------------------------------- | -------------------------------------- |
 | 1 | Product        | Overview, goals, core flow, features, in and out of scope, success criteria                 | `project-overview.md`                  |
-| 2 | Depth          | The workflow depth level and why; every feature raised to GA because it takes money          | `project-overview.md` → Workflow Depth |
+| 2 | Depth          | The workflow depth level and why; every feature raised to GA by a GA risk (money, sensitive personal data) | `project-overview.md` → Workflow Depth |
 | 3 | Architecture   | Stack, system boundaries (folders), storage, auth and access, invariants, testing tools      | `architecture.md`, `code-standards.md` |
 | 4 | Look (UI only) | References with take and don't take, mood, brand assets, theme direction, design source (Figma first or code first, and who makes the screens) | `design.md`, `ui-context.md` |
 | 5 | First features | The first 1–3 features as `F-01`…, each with 2–4 acceptance criteria (`AC-1`…), each one observable and checkable on its own | `feature-specs/` |
 
-For section 2, show the Workflow Depth table and its two rules from the template `context/project-overview.md` beside this skill, and place the project on it.
+For section 2, show the Workflow Depth table, its GA risks and its two rules from the template `context/project-overview.md` beside this skill, and place the project on it. When it keeps sensitive personal data, name the data protection law that likely applies, from where its users are (GDPR, PDPA…), for the user to confirm.
 
 For section 4, when a design skill is installed (Anthropic's `frontend-design`, for example), load it before proposing the look, and show the palette (named hex values) and typefaces it leads to, so `context kit` writes those exact values.
 
