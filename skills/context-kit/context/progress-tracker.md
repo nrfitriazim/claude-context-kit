@@ -31,9 +31,7 @@ change.
 
 ## Open Questions
 
-- [Any unresolved product or technical decisions. In a
-  client project, a question only the client can
-  answer starts with (client)]
+- [Any unresolved product or technical decisions]
 
 ## Open Assumptions
 

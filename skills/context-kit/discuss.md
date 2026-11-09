@@ -26,13 +26,8 @@ Before each question, look at the coverage table and ask about the most importan
 | Constraints     | Deadline, budget, hosting, a stack already chosen, the builder's experience  | Stack, the approaches                        |
 | Look (UI only)  | 1–3 references with what to take and not take from each, mood words, brand assets that exist | `design.md`, `ui-context.md`  |
 | Design source (UI only) | Figma first or code first, and for Figma first, who makes the screens (below) | `design.md` → Design Source |
-| Client (client projects only) | Is it built for someone else who makes the final call? Then: who signs off and how, and whose name the accounts are in (domain, hosting, payment gateway) | `project-overview.md` → Client |
 
 Done when every row is answered or has a default ready to propose. That is usually 4–8 questions; stop asking as soon as you could write the design.
-
-### Client projects
-
-Ask the Client row only when the idea leaves it unclear ("for my client", "a site for a dentist" usually settle it). In a client project the user often won't know every answer. When an answer belongs to the client, mark it **Ask the client** and move on, rather than guessing or pressing the user. Those questions become `(client)` Open Questions, and the recap carries them.
 
 ### Figma first, or code first
 
@@ -58,7 +53,7 @@ Show one section per message and wait for approval before the next. Fold changes
 
 | # | Section        | Holds                                                                                       | Becomes                                |
 | - | -------------- | ------------------------------------------------------------------------------------------- | -------------------------------------- |
-| 1 | Product        | Overview, goals, core flow, features, in and out of scope, success criteria; in a client project, the client, who signs off and the accounts in their name | `project-overview.md`                  |
+| 1 | Product        | Overview, goals, core flow, features, in and out of scope, success criteria                 | `project-overview.md`                  |
 | 2 | Depth          | The workflow depth level and why; every feature raised to GA by a GA risk (money, sensitive personal data) | `project-overview.md` → Workflow Depth |
 | 3 | Architecture   | Stack, system boundaries (folders), storage, auth and access, invariants, testing tools      | `architecture.md`, `code-standards.md` |
 | 4 | Look (UI only) | References with take and don't take, mood, brand assets, theme direction, design source (Figma first or code first, and who makes the screens) | `design.md`, `ui-context.md` |
@@ -68,7 +63,7 @@ For section 2, show the Workflow Depth table, its GA risks and its two rules fro
 
 For section 4, when a design skill is installed (Anthropic's `frontend-design`, for example), load it before proposing the look, and show the palette (named hex values) and typefaces it leads to, so `context kit` writes those exact values.
 
-Done when every section is approved. Then send a short recap: each approved section in a few lines, the open questions, anything still assumed, and the language the files will be written in (the discussion's, unless the user asks for another). In a client project, the recap also gives the Ask-the-client questions as one short message the user can paste to the client. End by telling the user the next step is `context kit`.
+Done when every section is approved. Then send a short recap: each approved section in a few lines, the open questions, anything still assumed, and the language the files will be written in (the discussion's, unless the user asks for another). End by telling the user the next step is `context kit`.
 
 ## The idea is allowed to die
 
