@@ -162,6 +162,16 @@ The discussion asks how you want to work:
 
 When the stack is decided, and again whenever a new tool joins the project, Claude looks for the vendor's official agent skill for each tool (community skills only when there is no official one), reads it before proposing it, and shows you a table: skill, vendor, whether it runs code, size, recommendation. Nothing installs without your approval. An install is a copy of the reviewed files into the repo's `.claude/skills/`, pinned by commit SHA in `architecture.md` → Skills. The full steps are in `ai-workflow-rules.md`.
 
+## For client work
+
+Building for someone else? Say so in the discussion, and Claude asks when it isn't clear. Then:
+
+- **Questions only the client can answer** are marked "Ask the client" rather than guessed. The recap ends with them as one message you can paste to the client.
+- **`project-overview.md` → Client** records who signs off and how, and which accounts must be in the client's name (domain, hosting, payment gateway).
+- **The gate opens on the client's sign-off**, which you relay and Claude logs with a date. Claude gives you a plain summary to send for it.
+- **The approved scope and ACs are the job's scope.** A later request is a new feature with its own spec, so you can quote it before it is built.
+- **Personal data:** the client is responsible for it under the law (data user / controller); you handle it for them (processor).
+
 ## With Superpowers
 
 [Superpowers](https://github.com/obra/superpowers) also starts with a brainstorm, so the first half overlaps: questions one at a time, approaches, a design you approve, no code before that. The difference is what stays behind. Superpowers writes a design doc and a plan for each piece of work, then drives the build with test-driven development, subagents and code review. This kit writes the project's standing context (the seven files, IDed acceptance criteria, where each value comes from, assumptions, workflow depth) and stops at approved specs. How the code gets written is left to you, or to Superpowers.

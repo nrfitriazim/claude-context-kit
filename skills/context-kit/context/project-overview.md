@@ -49,6 +49,38 @@ who it's for, and what problem it solves.]
 2. [Condition two]
 3. [Condition three]
 
+## Client
+
+[Client projects only: built for someone else who makes
+the final call. Otherwise keep this heading and one
+line: Not a client project.]
+
+- **Client**: [Name and business — e.g. Puan Aminah,
+  Kedai Kek Aminah]
+- **Signs off**: [Who makes the final call, and how the
+  sign-off arrives — e.g. Puan Aminah, on WhatsApp]
+- **Accounts in the client's name**: [e.g. domain,
+  hosting, payment gateway, business email, and who
+  holds the logins until handover]
+- **Data responsibility**: [When the project keeps
+  personal data: the client is responsible for it
+  under the law (data user / controller); the builder
+  handles it for them (processor). Otherwise: none.]
+
+Sign-offs:
+
+- [date — what was approved, by whom, how — e.g.
+  12 Nov — specs F-01 to F-03, Puan Aminah, WhatsApp]
+
+Rules:
+
+- The client's sign-off opens the gate. The builder
+  relays it, and it is logged above with a date.
+- A request outside the approved scope is a new
+  feature with its own `discuss` and spec, so the
+  change is visible, and can be quoted, before it is
+  built.
+
 ## Workflow Depth
 
 **Level**: [Prototype / Alpha / Beta / GA]
