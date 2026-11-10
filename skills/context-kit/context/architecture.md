@@ -40,7 +40,8 @@ direct database calls.]
 
 ## Skills
 
-[Agent skills committed to this repo's `.claude/skills/`.
+[Agent skills committed to this repo's skills folder
+(`.claude/skills/`, or `.agents/skills/`).
 Found by the skill check (`ai-workflow-rules.md`):
 vendor skills first, read before installing, approved
 before committing. The SHA pins exactly what was reviewed.]

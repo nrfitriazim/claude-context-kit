@@ -112,8 +112,9 @@ new tool joins the project (e.g. a payment provider).
    size, last update
 4. Present a table (skill · vendor · runs code? · size ·
    recommendation) — nothing installs without approval
-5. Install = copy the reviewed files into
-   `.claude/skills/`; record source + commit SHA in
+5. Install = copy the reviewed files into the project's
+   skills folder (`.claude/skills/`, or `.agents/skills/`
+   for Codex and Gemini CLI); record source + commit SHA in
    `architecture.md` → Skills. No installer CLIs, no `-y`
 6. On a new project phase: diff upstream against the
    pinned SHA, review, update on approval

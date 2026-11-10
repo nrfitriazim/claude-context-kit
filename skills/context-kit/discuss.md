@@ -54,12 +54,12 @@ Show one section per message and wait for approval before the next. Fold changes
 | # | Section        | Holds                                                                                       | Becomes                                |
 | - | -------------- | ------------------------------------------------------------------------------------------- | -------------------------------------- |
 | 1 | Product        | Overview, goals, core flow, features, in and out of scope, success criteria                 | `project-overview.md`                  |
-| 2 | Depth          | The workflow depth level and why; every feature raised to GA by a GA risk (money, sensitive personal data) | `project-overview.md` → Workflow Depth |
+| 2 | Depth          | The workflow depth level (Prototype, Alpha, Beta or GA) and why; every feature raised to GA by a GA risk (money, sensitive personal data) | `project-overview.md` → Workflow Depth |
 | 3 | Architecture   | Stack, system boundaries (folders), storage, auth and access, invariants, testing tools      | `architecture.md`, `code-standards.md` |
 | 4 | Look (UI only) | References with take and don't take, mood, brand assets, theme direction, design source (Figma first or code first, and who makes the screens) | `design.md`, `ui-context.md` |
 | 5 | First features | The first 1–3 features as `F-01`…, each with 2–4 acceptance criteria (`AC-1`…), each one observable and checkable on its own | `feature-specs/` |
 
-For section 2, show the Workflow Depth table, its GA risks and its two rules from the template `context/project-overview.md` beside this skill, and place the project on it. When it keeps sensitive personal data, name the data protection law that likely applies, from where its users are (GDPR, PDPA…), for the user to confirm.
+For section 2, read the template `context/project-overview.md` beside this skill first, then show its Workflow Depth table, GA risks and two rules, and place the project on it. Those four levels are the only ones; a project never gets a level of its own. When it keeps sensitive personal data, name the data protection law that likely applies, from where its users are (GDPR, PDPA…), for the user to confirm.
 
 For section 4, when a design skill is installed (Anthropic's `frontend-design`, for example), load it before proposing the look, and show the palette (named hex values) and typefaces it leads to, so `context kit` writes those exact values.
 

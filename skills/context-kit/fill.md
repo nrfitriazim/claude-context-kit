@@ -1,6 +1,6 @@
 # `context kit`
 
-Goal: the project's `context/` folder, every file filled from the approved design, self-reviewed, and handed to the user for approval. Every write in this command goes inside `context/`, plus one short pointer section in `CLAUDE.md`.
+Goal: the project's `context/` folder, every file filled from the approved design, self-reviewed, and handed to the user for approval. Every write in this command goes inside `context/`, plus one short pointer section in the instructions file (`SKILL.md` → Where things live).
 
 ## 0. Check the starting point
 
@@ -19,7 +19,7 @@ Read each template from this skill's `context/` and write the filled version to 
 - `feature-specs/_template.md`, copied unchanged: it is the blank for future specs
 - `feature-specs/F-01-<short-name>.md` and onwards, one per approved first feature, from the template
 
-Then give later sessions the way in: add this section to the project's `CLAUDE.md` (create the file if it is missing; append if it exists, leaving its other text as it is; skip if the section is already there):
+Then give later sessions the way in: add this section to the project's instructions file, the one your own tool reads (create the file if it is missing; append if it exists, leaving its other text as it is; skip if the section is already there):
 
 ```markdown
 ## Context kit
@@ -72,7 +72,7 @@ Re-read every file you wrote, then run all four checks. Fix what fails and run a
 
 Tell the user, briefly:
 
-- the files written, with one line each on what it holds, and the pointer section added to `CLAUDE.md`
+- the files written, with one line each on what it holds, and the pointer section added to the instructions file, named
 - the open questions and assumptions that need their call
 - where to start reading: `project-overview.md`, then `F-01`
 

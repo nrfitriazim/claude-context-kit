@@ -38,7 +38,7 @@ Two commands, one gate:
 | Command          | What happens                                                                                     | Writes          |
 | ---------------- | ------------------------------------------------------------------------------------------------ | --------------- |
 | `discuss [idea]` | Questions one at a time, 2–3 approaches with a recommendation, the design approved section by section. The idea is allowed to die here. | Nothing |
-| `context kit`    | The seven context files and the first feature specs, filled from the discussion, self-reviewed, handed to you for approval. | `context/`, plus a short pointer in `CLAUDE.md` |
+| `context kit`    | The seven context files and the first feature specs, filled from the discussion, self-reviewed, handed to you for approval. | `context/`, plus a short pointer in `CLAUDE.md` (or your tool's own instructions file) |
 
 **The gate:** no code until you approve the filled specs.
 
@@ -74,6 +74,14 @@ mkdir -p .claude/skills && cp -r /path/to/claude-context-kit/skills/context-kit 
 New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null; Copy-Item -Recurse claude-context-kit\skills\context-kit "$HOME\.claude\skills\"
 ```
 
+**Codex or Gemini CLI** (one project; see [Without Claude Code](#without-claude-code) for how far each was tested):
+
+```bash
+mkdir -p .agents/skills && cp -r /path/to/claude-context-kit/skills/context-kit .agents/skills/
+```
+
+Gemini CLI loads a project's skills only after you trust the folder, which it asks the first time you run it there.
+
 To update, pull this repo and copy the folder again.
 
 ## Use
@@ -92,7 +100,7 @@ Nothing is written during the discussion.
 
 Turns the approved design into the project's `context/` folder: the seven files, plus one spec per first feature (`feature-specs/F-01-….md`). Claude then reviews its own output (no placeholders, no contradictions between files, every AC checkable as pass or fail) and hands it to you.
 
-It also adds a short "Context kit" section to the project's `CLAUDE.md`, so every later session reads the tracker and specs first and builds only against approved specs.
+It also adds a short "Context kit" section to the project's instructions file (`CLAUDE.md` in Claude Code, `AGENTS.md` in Codex, `GEMINI.md` in Gemini CLI), so every later session reads the tracker and specs first and builds only against approved specs.
 
 You read, ask for changes, and approve. Until then, Claude writes nothing outside `context/` apart from that pointer.
 
@@ -177,7 +185,12 @@ So: plan with this kit, build with Superpowers. When its test-driven-development
 
 ## Without Claude Code
 
-The templates are plain Markdown. Copy `skills/context-kit/context/` into any repo and fill it by hand or with any AI tool; `discuss.md` and `fill.md` describe the method step by step.
+Codex and Gemini CLI read the same skill format. Tested on 2026-11-10, one run each, with the same idea (a student planner, asked in Malay):
+
+- **Codex** (codex-cli 0.162.1, gpt-6-astra): found the skill in `.agents/skills/`, ran the discussion, and filled every file and spec. Levels, specs and the tracker agreed with each other. The `context kit` step took about 25 minutes at high reasoning effort, against about 6 in Claude Code. A second `context kit` run at medium effort took about 8 minutes and wrote its pointer to `AGENTS.md`.
+- **Gemini CLI** (0.67.0, Gemini 3.1 Pro): found the skill and ran the discussion, but gave the project a depth level of its own instead of one of the kit's four. `discuss.md` now names the four levels; that fix is not re-tested in Gemini, and neither is `context kit` (the free quota ran out).
+
+Any other tool: the templates are plain Markdown. Copy `skills/context-kit/context/` into any repo and fill it by hand or with any AI tool; `discuss.md` and `fill.md` describe the method step by step.
 
 ## Credits
 

@@ -10,14 +10,15 @@ Two commands, one gate.
 | Command          | Does                                                                     | Writes          |
 | ---------------- | ------------------------------------------------------------------------ | --------------- |
 | `discuss [idea]` | Talks the idea through until the user approves a design, or drops the idea | Nothing         |
-| `context kit`    | Fills the seven context files and the first feature specs from that design | `context/`, plus a pointer in `CLAUDE.md` |
+| `context kit`    | Fills the seven context files and the first feature specs from that design | `context/`, plus a pointer in the instructions file |
 
-**The gate**: until the user approves the filled specs, every file you write lives in the project's `context/` folder, apart from the short pointer section `context kit` adds to `CLAUDE.md` so later sessions find the specs. Code, scaffolding, package installs and config come after approval, one feature at a time, built against its spec.
+**The gate**: until the user approves the filled specs, every file you write lives in the project's `context/` folder, apart from the short pointer section `context kit` adds to the instructions file so later sessions find the specs. Code, scaffolding, package installs and config come after approval, one feature at a time, built against its spec.
 
 ## Where things live
 
 - **Templates**: `context/` beside this file, the seven files plus `feature-specs/_template.md`. Read them fresh from here every time; they are the source of truth.
 - **The project's copy**: `context/` at the project root, which is the working directory unless the user names another folder.
+- **The instructions file**: the file your agent reads at the start of every session, at the project root: `CLAUDE.md` in Claude Code, `GEMINI.md` in Gemini CLI, `AGENTS.md` in Codex and most other agents.
 
 ## Route the request
 
