@@ -187,7 +187,7 @@ So: plan with this kit, build with Superpowers. When its test-driven-development
 
 Codex and Gemini CLI read the same skill format. Tested on 2026-11-10, one run each, with the same idea (a student planner, asked in Malay):
 
-- **Codex** (codex-cli 0.162.1, gpt-6-astra): found the skill in `.agents/skills/`, ran the discussion, and filled every file and spec. Levels, specs and the tracker agreed with each other. The `context kit` step took about 25 minutes at high reasoning effort, against about 6 in Claude Code. A second `context kit` run at medium effort took about 8 minutes and wrote its pointer to `AGENTS.md`.
+- **Codex** (codex-cli 0.162.1): found the skill in `.agents/skills/`, ran the discussion, and filled every file and spec. Levels, specs and the tracker agreed with each other, and the pointer went to `AGENTS.md`.
 - **Gemini CLI** (0.67.0, Gemini 3.1 Pro): found the skill and ran the discussion, but gave the project a depth level of its own instead of one of the kit's four. `discuss.md` now names the four levels; that fix is not re-tested in Gemini, and neither is `context kit` (the free quota ran out).
 
 Any other tool: the templates are plain Markdown. Copy `skills/context-kit/context/` into any repo and fill it by hand or with any AI tool; `discuss.md` and `fill.md` describe the method step by step.
