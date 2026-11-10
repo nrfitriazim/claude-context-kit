@@ -164,7 +164,7 @@ When the stack is decided, and again whenever a new tool joins the project, Clau
 
 ## With Superpowers
 
-[Superpowers](https://github.com/obra/superpowers) also starts with a brainstorm, so the first half overlaps: questions one at a time, approaches, a design you approve, no code before that. The difference is what stays behind. Superpowers writes a design doc and a plan for each piece of work, then drives the build with test-driven development, subagents and code review. This kit writes the project's standing context (the seven files, IDed acceptance criteria, where each value comes from, assumptions, workflow depth) and stops at approved specs. How the code gets written is left to you, or to Superpowers.
+This kit's discussion step takes its shape from the brainstorming skill in [Superpowers](https://github.com/obra/superpowers) (see [Credits](#credits)), so the first half overlaps: questions one at a time, approaches, a design you approve, no code before that. The difference is what stays behind. Superpowers writes a design doc and a plan for each piece of work, then drives the build with test-driven development, subagents and code review. This kit writes the project's standing context (the seven files, IDed acceptance criteria, where each value comes from, assumptions, workflow depth) and stops at approved specs. How the code gets written is left to you, or to Superpowers.
 
 They work together. Tested with both installed in one project (Superpowers 7.0.0, Claude Code 2.1.319, Claude Opus 5.5):
 
@@ -178,6 +178,11 @@ So: plan with this kit, build with Superpowers. When its test-driven-development
 ## Without Claude Code
 
 The templates are plain Markdown. Copy `skills/context-kit/context/` into any repo and fill it by hand or with any AI tool; `discuss.md` and `fill.md` describe the method step by step.
+
+## Credits
+
+- **The six-file idea** (project overview, architecture, code standards, UI context, AI workflow rules, progress tracker) comes from JS Mastery's [Six-File Context System](https://jsmastery.com/waitlist/six-file-context). The templates here are written in this kit's own words, and add `design.md`, feature specs with IDed acceptance criteria, where each value comes from, logged assumptions, risk-based workflow depth and the skill check.
+- **The discussion step** takes its shape from the brainstorming skill in Jesse Vincent's [Superpowers](https://github.com/obra/superpowers): questions one at a time, a few approaches, a design approved section by section.
 
 ## License
 

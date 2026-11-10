@@ -1,15 +1,15 @@
 # Progress Tracker
 
-Update this file after every meaningful implementation
-change.
+Kept current: updated whenever a feature changes
+status, and at the end of every session.
 
 ## Current Phase
 
-- [e.g. Not started / In progress / Complete]
+- [e.g. Specs drafted, awaiting approval]
 
 ## Current Goal
 
-- [What you are building right now]
+- [The one thing being worked on now]
 
 ## Features
 
@@ -27,11 +27,12 @@ change.
 
 ## Next Up
 
-- [First unit to build]
+- [The next feature to build]
 
 ## Open Questions
 
-- [Any unresolved product or technical decisions]
+- [Questions only the user can answer, each with the
+  feature it holds up]
 
 ## Open Assumptions
 
@@ -44,9 +45,10 @@ forgotten in chat.]
 
 ## Architecture Decisions
 
-- [Decisions made that affect the system design or
-  data model — include why the decision was made]
+- [Each choice that shapes the system or its data, with
+  the reason, and the options turned down, with theirs]
 
 ## Session Notes
 
-- [Context needed to resume work in the next session]
+- [Where things stand, written so a new session can
+  pick up without asking]

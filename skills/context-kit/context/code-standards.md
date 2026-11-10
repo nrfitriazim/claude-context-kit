@@ -2,51 +2,48 @@
 
 ## General
 
-- [Principle — e.g. Keep modules small and single-purpose]
-- [Principle — e.g. Fix root causes, do not layer workarounds]
-- [Principle — e.g. Do not mix unrelated concerns in one
-  component or route]
+- [e.g. One job per file or module]
+- [e.g. Fix the cause of a bug, not its symptom]
+- [e.g. Components render; data fetching and business
+  rules live elsewhere]
 
 ## TypeScript
 
 [Rename this section to the project's language if it is
 not TypeScript.]
 
-- [Rule — e.g. Strict mode is required throughout the project]
-- [Rule — e.g. Avoid any — use explicit interfaces or narrowly
-  scoped types]
-- [Rule — e.g. Validate unknown external input at system
-  boundaries before trusting it]
+- [e.g. `strict: true` in tsconfig]
+- [e.g. No `any`: type the shape instead]
+- [e.g. Data from forms, URLs and other services is
+  parsed (with Zod, say) before the code uses it]
 
-## [Framework — e.g. Next.js]
+## [Framework, e.g. Next.js]
 
-- [Convention — e.g. Default to server components]
-- [Convention — e.g. Add use client only when browser
-  interactivity requires it]
-- [Convention — e.g. Keep route handlers focused on a
-  single responsibility]
+- [e.g. Server components, unless the page needs the
+  browser]
+- [e.g. One route handler per action]
 
 ## Styling
 
-- [Rule — e.g. Use CSS custom property tokens — no
-  hardcoded hex values]
-- [Rule — e.g. Follow the border radius scale defined
-  in ui-context.md]
+- [e.g. Colours come from the tokens in
+  `ui-context.md`; no raw hex in components]
+- [e.g. Radius, spacing and shadows use the scales in
+  `ui-context.md`]
 
 ## API Routes
 
-- [Rule — e.g. Validate and parse request input before
-  any logic runs]
-- [Rule — e.g. Enforce auth and ownership before any mutation]
-- [Rule — e.g. Return consistent, predictable response shapes]
+- [e.g. Parse the request body first; reject what
+  doesn't fit]
+- [e.g. Check who is asking, and that they own the
+  record, before any write]
+- [e.g. Every response has the same shape: `{ data }`
+  or `{ error }`]
 
 ## Data and Storage
 
-- [Rule — e.g. Metadata belongs in the database]
-- [Rule — e.g. Large generated content belongs in file
-  or blob storage]
-- [Rule — e.g. Do not store large content directly in
-  the database]
+- [e.g. Records and relations go in the database]
+- [e.g. Files and images go in object storage; the
+  database keeps their URL]
 
 ## Testing
 
@@ -90,7 +87,6 @@ Rules:
 
 ## File Organization
 
-- `[folder]/` — [What belongs here]
-- `[folder]/` — [What belongs here]
-- `[folder]/` — [What belongs here]
-- `[folder]/` — [What belongs here]
+- `[folder]/` — [what goes here]
+- `[folder]/` — [what goes here]
+- `[folder]/` — [what goes here]

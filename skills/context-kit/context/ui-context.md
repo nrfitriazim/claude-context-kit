@@ -7,45 +7,44 @@ design system page (see the end of this file).
 
 ## Theme
 
-[Describe the overall visual language — e.g. Dark only.
-No light mode. The design language is a dark technical
-workspace — near-black backgrounds, layered surfaces,
-and vivid accent colors for interactive elements.]
+[The look in two or three lines — e.g. Light and warm:
+off-white pages, soft cards with a hairline border, one
+coral accent for anything you can press. Dark mode
+follows the system setting.]
 
 ## Colors
 
-[Define your color tokens as CSS custom properties.
-All components must use these tokens — no hardcoded
-hex values. Figma-first projects take these values
-from the Figma variables.]
+[Every colour is a CSS variable, and components use
+only these variables. Figma-first projects copy the
+values from the Figma variables.]
 
-| Role            | CSS Variable       | Value    |
-| --------------- | ------------------ | -------- |
-| Page background | `--bg-base`        | `#[hex]` |
-| Surface         | `--bg-surface`     | `#[hex]` |
-| Primary text    | `--text-primary`   | `#[hex]` |
-| Muted text      | `--text-muted`     | `#[hex]` |
-| Primary accent  | `--accent-primary` | `#[hex]` |
-| Border          | `--border-default` | `#[hex]` |
-| Error           | `--state-error`    | `#[hex]` |
-| Success         | `--state-success`  | `#[hex]` |
+| Role                    | CSS Variable           | Value    |
+| ----------------------- | ---------------------- | -------- |
+| Background              | `--color-bg`           | `#[hex]` |
+| Cards and panels        | `--color-surface`      | `#[hex]` |
+| Text                    | `--color-text`         | `#[hex]` |
+| Secondary text          | `--color-text-soft`    | `#[hex]` |
+| Accent (buttons, links) | `--color-accent`       | `#[hex]` |
+| Borders                 | `--color-border`       | `#[hex]` |
+| Error                   | `--color-error`        | `#[hex]` |
+| Success                 | `--color-success`      | `#[hex]` |
 
 ## Typography
 
-| Role      | Font              | Variable      |
-| --------- | ----------------- | ------------- |
-| UI text   | [e.g. Geist Sans] | `--font-sans` |
-| Display   | [e.g. Playfair Display] | `--font-display` |
-| Code/mono | [e.g. Geist Mono] | `--font-mono` |
+| Role     | Font                 | Variable         |
+| -------- | -------------------- | ---------------- |
+| Body     | [e.g. Inter]         | `--font-body`    |
+| Headings | [e.g. Fraunces]      | `--font-heading` |
+| Code     | [e.g. JetBrains Mono] | `--font-mono`   |
 
 ### Type Scale
 
 | Style     | Font      | Size / Line height | Weight     | Use            |
 | --------- | --------- | ------------------ | ---------- | -------------- |
-| Display 1 | [Display] | [48 / 56]          | [Bold]     | [Page titles]  |
-| Heading 1 | [Sans]    | [28 / 36]          | [Semibold] | [Card titles]  |
-| Body      | [Sans]    | [14 / 20]          | [Regular]  | [Body copy]    |
-| Small     | [Sans]    | [12 / 16]          | [Regular]  | [Captions]     |
+| Display 1 | [Heading] | [48 / 56]          | [Bold]     | [Page titles]  |
+| Heading 1 | [Body]    | [28 / 36]          | [Semibold] | [Card titles]  |
+| Body      | [Body]    | [14 / 20]          | [Regular]  | [Body copy]    |
+| Small     | [Body]    | [12 / 16]          | [Regular]  | [Captions]     |
 
 ## Spacing
 
@@ -54,11 +53,11 @@ Base unit: [e.g. 4px]. Scale: [e.g. 4 · 8 · 12 · 16 ·
 
 ## Border Radius
 
-| Context           | Class            |
-| ----------------- | ---------------- |
-| Inline / small UI | `rounded-[size]` |
-| Cards / panels    | `rounded-[size]` |
-| Modals / overlays | `rounded-[size]` |
+| Used on               | Value         |
+| --------------------- | ------------- |
+| Buttons, inputs, tags | [e.g. 8px]    |
+| Cards                 | [e.g. 12px]   |
+| Dialogs               | [e.g. 16px]   |
 
 ## Shadows
 
@@ -79,22 +78,21 @@ here; the design system page renders each one.]
 
 ## Component Library
 
-[e.g. shadcn/ui on top of Tailwind. Components live
-in components/ui/. Use the CLI to add new components
-rather than writing from scratch.]
+[Which library, and how it is used — e.g. shadcn/ui,
+added through its CLI into `components/ui/`, never
+hand-copied.]
 
 ## Layout Patterns
 
-- [Pattern — e.g. Editor: full-viewport split with
-  left sidebar, center canvas, right sidebar]
-- [Pattern — e.g. Sidebars: fixed width with border separator]
-- [Pattern — e.g. Modals: centered overlay with backdrop blur]
-- [Pattern — e.g. Navbar: top bar with bottom border]
+- [e.g. Dashboard: sidebar on the left, content on the
+  right; on phones the sidebar becomes a bottom bar]
+- [e.g. Forms: one column, labels above the fields]
+- [e.g. Dialogs: centred, over a dimmed page]
 
 ## Icons
 
-[e.g. Lucide React. Stroke-based icons only. Sizes:
-h-4 w-4 for inline, h-5 w-5 for buttons.]
+[Icon set and sizes — e.g. Lucide, outline style;
+16px beside text, 20px in buttons.]
 
 ## Motion
 

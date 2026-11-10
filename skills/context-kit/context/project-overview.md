@@ -2,52 +2,54 @@
 
 ## Overview
 
-[One paragraph describing what this application does,
-who it's for, and what problem it solves.]
+[One paragraph: what the product is, who uses it, and
+the problem it takes away.]
 
 ## Goals
 
-1. [Goal one — specific and measurable]
-2. [Goal two]
-3. [Goal three]
+1. [A goal you can measure — e.g. A student sees every
+   deadline for the week on one screen]
+2. [Goal]
+3. [Goal]
 
 ## Core User Flow
 
-1. [Step one — e.g. User signs in]
-2. [Step two]
-3. [Step three]
-4. [Continue until the core flow is complete]
+[The one path a user must be able to complete, step by
+step.]
+
+1. [e.g. The student signs in with Google]
+2. [e.g. Adds an assignment with its due date]
+3. [e.g. Sees it on the dashboard, sorted by due date]
+4. […until the path is complete]
 
 ## Features
 
-### [Feature Category One]
+### [Group — e.g. Assignments]
 
-- [Feature description]
-- [Feature description]
+- [Feature — e.g. Add, edit and delete assignments]
+- [Feature]
 
-### [Feature Category Two]
+### [Group]
 
-- [Feature description]
-- [Feature description]
+- [Feature]
 
 ## Scope
 
 ### In Scope
 
-- [What you are building]
-- [What you are building]
+- [What v1 includes]
 
 ### Out of Scope
 
-- [What you are explicitly not building]
-- [What you are explicitly not building]
+- [What v1 leaves out, said plainly — e.g. No sync with
+  the university portal]
 
 ## Success Criteria
 
-1. [Specific, verifiable condition — e.g. A signed-in
-   user can create and open a project]
-2. [Condition two]
-3. [Condition three]
+1. [Something you can check — e.g. Ten classmates use
+   it through one full week of deadlines]
+2. [Criterion]
+3. [Criterion]
 
 ## Workflow Depth
 

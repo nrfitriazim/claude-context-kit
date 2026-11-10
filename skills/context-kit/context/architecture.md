@@ -2,36 +2,41 @@
 
 ## Stack
 
-| Layer     | Technology                  | Role   |
-| --------- | --------------------------- | ------ |
-| Framework | [e.g. Next.js + TypeScript] | [Role] |
-| UI        | [e.g. Tailwind + shadcn/ui] | [Role] |
-| Auth      | [e.g. Clerk]                | [Role] |
-| Database  | [e.g. Prisma + PostgreSQL]  | [Role] |
-| [Layer]   | [Technology]                | [Role] |
+| Layer     | Technology                  | Used for                                  |
+| --------- | --------------------------- | ----------------------------------------- |
+| Framework | [e.g. Next.js, TypeScript]  | [e.g. Pages and server logic]             |
+| Styling   | [e.g. Tailwind CSS]         | [e.g. All styling, through the tokens in `ui-context.md`] |
+| Auth      | [e.g. Supabase Auth]        | [e.g. Email and Google sign-in]           |
+| Database  | [e.g. Postgres on Supabase] | [e.g. Users, records, settings]           |
+| [Layer]   | [Technology]                | [Used for]                                |
 
 ## System Boundaries
 
-- `[folder]` — [What this folder owns and is responsible for]
-- `[folder]` — [What this folder owns and is responsible for]
-- `[folder]` — [What this folder owns and is responsible for]
-- `[folder]` — [What this folder owns and is responsible for]
+[One line per top-level folder: what it owns, and what
+stays out of it — e.g. `app/` — routes and pages; no
+direct database calls.]
+
+- `[folder]` — [what it owns]
+- `[folder]` — [what it owns]
+- `[folder]` — [what it owns]
 
 ## Storage Model
 
-- **[Storage type e.g. Database]**: [What lives here —
-  e.g. metadata, ownership, relationships]
-- **[Storage type e.g. Blob/File Storage]**: [What lives
-  here — e.g. generated files, media, large artifacts]
+[Each place data is kept, and what goes there.]
+
+- **[e.g. Postgres]**: [e.g. accounts, records and who
+  owns them]
+- **[e.g. Object storage]**: [e.g. uploads and images;
+  the database keeps their URL]
 
 ## Auth and Access Model
 
-- [How authentication works — e.g. Every user signs in
-  via Clerk]
-- [How ownership works — e.g. Every project has a single
-  owner]
-- [How access control works — e.g. Only the owner or a
-  collaborator can mutate project resources]
+- [Sign-in — e.g. Email or Google, through Supabase
+  Auth]
+- [Ownership — e.g. Each record belongs to the user who
+  created it]
+- [Who can change what — e.g. A user edits only their
+  own records; an admin can edit any]
 
 ## Skills
 
@@ -49,8 +54,10 @@ frontend-design]
 
 ## Invariants
 
-1. [Rule the codebase must never violate — e.g. Request
-   handlers do not run long-lived background work]
-2. [Invariant two]
-3. [Invariant three]
-4. [Invariant four]
+[Rules that hold everywhere in the code, whatever the
+feature.]
+
+1. [e.g. Prices are computed on the server, never taken
+   from the browser]
+2. [Invariant]
+3. [Invariant]
