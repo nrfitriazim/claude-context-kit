@@ -1,6 +1,6 @@
 ---
 name: context-kit
-description: Spec-first project start. Use when the user types `discuss [idea]` (talk an idea through before any code - one question at a time, 2-3 approaches, a design approved section by section) or `context kit` (turn the approved design into seven context files and the first feature specs, then hold all code until the user approves them), or asks to plan or spec a new project or feature before building it.
+description: Spec-first project start. Use when the user types `discuss [idea]` (talk an idea through before any code - numbered questions in rounds, 2-3 approaches, a design approved section by section) or `context kit` (turn the approved design into seven context files and the first feature specs, then hold all code until the user approves them), or asks to plan or spec a new project or feature before building it.
 ---
 
 # Context kit
@@ -30,7 +30,7 @@ Two commands, one gate.
 ## Both commands
 
 - **Speak the user's language** (BM, English, rojak: match them). Keep file names, template headings and IDs (`F-01`, `AC-1`, `D-1`) exactly as the templates have them, because the method and other tools rely on them.
-- **One question per message**, then wait for the answer.
+- **Questions in rounds**: number them, recommend an answer to each, then wait for the answers.
 - **Every decision has an owner**: the user's answer, a default the user approved, or a logged `⚠️ Assumed`. A gap you notice becomes a question or a logged assumption, so nothing is decided silently.
 
 ## After approval

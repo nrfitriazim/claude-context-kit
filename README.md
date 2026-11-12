@@ -9,7 +9,7 @@ A Claude Code skill plus seven context templates for starting a project the spec
 Ask Claude to "build me an app" and it guesses everything you didn't say, then the app breaks. This kit turns that around: discuss first, write the spec, approve it, and only then does Claude write code.
 
 1. **Install** once: [copy the skill folder](#install) into `~/.claude/skills/`. The seven templates come with it.
-2. **`discuss [idea]`** in your project folder, for example `discuss a pre-order page for my mum's kuih raya`. Claude asks one question at a time, offers 2–3 approaches with one recommended, and shows the design section by section for you to approve. If the idea doesn't hold up, you stop there, and no code is wasted.
+2. **`discuss [idea]`** in your project folder, for example `discuss a pre-order page for my mum's kuih raya`. Claude asks numbered questions in short rounds, each with a recommended answer, offers 2–3 approaches with one recommended, and shows the design section by section for you to approve. If the idea doesn't hold up, you stop there, and no code is wasted.
 3. **`context kit`**: Claude fills the seven files in `context/` and the first feature spec (`F-01`) from your answers, checks its own work (no placeholders, no contradictions), and waits for your approval.
 4. **Approve the specs**, and Claude writes code: one feature at a time, against the acceptance criteria (`AC-1`, `AC-2`…) in its spec. The ACs are the contract.
 
@@ -37,7 +37,7 @@ Two commands, one gate:
 
 | Command          | What happens                                                                                     | Writes          |
 | ---------------- | ------------------------------------------------------------------------------------------------ | --------------- |
-| `discuss [idea]` | Questions one at a time, 2–3 approaches with a recommendation, the design approved section by section. The idea is allowed to die here. | Nothing |
+| `discuss [idea]` | Numbered questions in rounds, 2–3 approaches with a recommendation, the design approved section by section. The idea is allowed to die here. | Nothing |
 | `context kit`    | The seven context files and the first feature specs, filled from the discussion, self-reviewed, handed to you for approval. | `context/`, plus a short pointer in `CLAUDE.md` (or your tool's own instructions file) |
 
 **The gate:** no code until you approve the filled specs.
@@ -90,7 +90,7 @@ To update, pull this repo and copy the folder again.
 
 Run it in the project folder. If the folder already has code or docs, Claude reads them first and skips the questions they answer.
 
-1. **Questions, one at a time.** Numbered (`1 / 6`), usually 4–8 of them, mostly pick-one with a recommended option. They cover who it is for, the core flow, what is in and out of v1, whether it takes money or keeps sensitive personal data, what success looks like, your constraints, and the look if it has a UI, including whether to design in Figma first or go straight to code.
+1. **Questions, in rounds.** Each round asks everything that can be asked yet, numbered (`Q1`, `Q2`…) with a recommended answer you can accept with "yes"; usually 4–8 questions over two or three rounds. Claude looks up facts itself and asks you only for decisions. They cover who it is for, the core flow, what is in and out of v1, whether it takes money or keeps sensitive personal data, what success looks like, your constraints, and the look if it has a UI, including whether to design in Figma first or go straight to code.
 2. **Two or three approaches**, with trade-offs and one marked Recommended. You pick.
 3. **The design, section by section:** Product, Depth, Architecture, Look, First features. You approve each one before the next.
 
@@ -172,7 +172,7 @@ When the stack is decided, and again whenever a new tool joins the project, Clau
 
 ## With Superpowers
 
-This kit's discussion step takes its shape from the brainstorming skill in [Superpowers](https://github.com/obra/superpowers) (see [Credits](#credits)), so the first half overlaps: questions one at a time, approaches, a design you approve, no code before that. The difference is what stays behind. Superpowers writes a design doc and a plan for each piece of work, then drives the build with test-driven development, subagents and code review. This kit writes the project's standing context (the seven files, IDed acceptance criteria, where each value comes from, assumptions, workflow depth) and stops at approved specs. How the code gets written is left to you, or to Superpowers.
+This kit's discussion step takes its shape from the brainstorming skill in [Superpowers](https://github.com/obra/superpowers) (see [Credits](#credits)), so the first half overlaps: questions first, approaches, a design you approve, no code before that. The difference is what stays behind. Superpowers writes a design doc and a plan for each piece of work, then drives the build with test-driven development, subagents and code review. This kit writes the project's standing context (the seven files, IDed acceptance criteria, where each value comes from, assumptions, workflow depth) and stops at approved specs. How the code gets written is left to you, or to Superpowers.
 
 They work together. Tested with both installed in one project (Superpowers 7.0.0, Claude Code 2.1.319, Claude Opus 5.5):
 
@@ -195,7 +195,8 @@ Any other tool: the templates are plain Markdown. Copy `skills/context-kit/conte
 ## Credits
 
 - **The six-file idea** (project overview, architecture, code standards, UI context, AI workflow rules, progress tracker) comes from JS Mastery's [Six-File Context System](https://jsmastery.com/waitlist/six-file-context). The templates here are written in this kit's own words, and add `design.md`, feature specs with IDed acceptance criteria, where each value comes from, logged assumptions, risk-based workflow depth and the skill check.
-- **The discussion step** takes its shape from the brainstorming skill in Jesse Vincent's [Superpowers](https://github.com/obra/superpowers): questions one at a time, a few approaches, a design approved section by section.
+- **The discussion step** takes its shape from the brainstorming skill in Jesse Vincent's [Superpowers](https://github.com/obra/superpowers): questions before code, a few approaches, a design approved section by section.
+- **Asking in rounds** comes from the grilling skill in Matt Pocock's [skills](https://github.com/mattpocock/skills): each round asks every question whose prerequisites are settled, each with a recommended answer, and facts are looked up rather than asked.
 
 ## License
 
