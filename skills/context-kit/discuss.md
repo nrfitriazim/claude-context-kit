@@ -10,23 +10,13 @@ If the working folder has anything in it (code, a README, git history, a brief, 
 
 Then restate the idea in one or two sentences so the user can correct it early.
 
-## 2. Questions, in rounds
+## 2. Questions, one at a time
 
-Ask in rounds. A round holds every question you can ask now: each open row of the coverage table below whose answer does not depend on another row that is still open. A question that needs an answer you have not heard yet waits for a later round. Most discussions take two or three rounds of 2–5 questions.
+One question per message, then wait. Number them (`1 / 6`); the total is your estimate and may change. Prefer questions the user can answer by picking: 2–4 options, your recommended one first with a one-line reason. They can always answer in their own words.
 
-Number the questions across the whole discussion (`Q1`, `Q2`, and on into later rounds), so the user can reply by number: "1 yes, 2 B, 3 not sure". Give each question a short title, then the question, then 2–4 options when picking works, then your recommendation on its own line, worded so that "yes" accepts it, with a one-line reason. The user can always answer in their own words. Send the round, then wait for the answers.
+Before each question, look at the coverage table and ask about the most important row still open. Rows that need neither the user's facts nor their taste get no question: propose a default in the design instead, where approving it costs one word. A row the idea or the folder already answers gets no question either: restate it in one line so the user can correct it.
 
-```
-**Q1 · Who it is for**: who opens this, and what do they do today instead?
-A. …  B. …  C. …
-➡️ A, because …
-```
-
-Rows that need neither the user's facts nor their taste get no question: propose a default in the design instead, where approving it costs one word. A row the idea or the folder already answers is not asked either; restate it in one line so the user can correct it. Some answers only the user has (a deadline, a budget): ask those plainly, with an example answer instead of a recommendation.
-
-Facts are yours to find; decisions are the user's. When a question needs a fact you can look up (the folder, the docs, a vendor's pricing page), look it up before you send the round and put what you found in the question. When the lookup would take long, send the rest of the round first; only the questions that depend on that fact wait.
-
-After each round, see what the answers opened or closed. A settled row can open a follow-up (Figma first opens who makes the screens), and a pivot can reopen rows you thought were done. The next round is whatever is open now.
+Facts are yours to find; decisions are the user's. When a question needs a fact you can look up (the folder, the docs, a vendor's pricing page), look it up before you ask, and put what you found in the question. Some answers only the user has, like a deadline or a budget: ask those plainly, with an example answer instead of a recommendation.
 
 | Row             | What you need                                                                 | Fills                                        |
 | --------------- | ----------------------------------------------------------------------------- | -------------------------------------------- |
@@ -39,7 +29,7 @@ After each round, see what the answers opened or closed. A settled row can open 
 | Look (UI only)  | 1–3 references with what to take and not take from each, mood words, brand assets that exist | `design.md`, `ui-context.md`  |
 | Design source (UI only) | Figma first or code first, and for Figma first, who makes the screens (below) | `design.md` → Design Source |
 
-Done when every row is answered or has a default ready to propose. That is usually 4–8 questions over two or three rounds; stop asking as soon as you could write the design.
+Done when every row is answered or has a default ready to propose. That is usually 4–8 questions; stop asking as soon as you could write the design.
 
 ### Figma first, or code first
 
@@ -48,7 +38,7 @@ Every UI project gets this as a question, because only the user knows how they w
 - **Code first**: the look is approved on the design system page inside the app (`ui-context.md` → Design System Page). Recommend it for solo builds and prototypes.
 - **Figma first**: each feature's screens are designed and approved in Figma before its code is written. Recommend it when a client expects mockups, or the user already designs in Figma.
 
-When the answer is Figma first, ask who makes the screens in the next round:
+When the answer is Figma first, ask the follow-up question of who makes the screens:
 
 - **The user or their designer**: Claude reads the frames and variables through a Figma MCP server when one is connected, or from the links and screenshots the user shares.
 - **Claude drafts them in Figma** through a Figma MCP server, and the user approves or edits them there. Check that a Figma MCP server is connected before offering this; when none is, say so and offer the other two routes.
